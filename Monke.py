@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import discord
 import asyncio
 import os
@@ -19,7 +21,7 @@ bot = commands.Bot(command_prefix = "m!",
                    case_insensitive=True) # Discord Bot <- BOT!
                                           # (Some retarded tutorials will tell u to
                                           # switch client and bot like FUCKING RETARDS)
-client = discord.Client(intents=intents) # Discord Client
+client = discord.Client() # Discord Client
 
 # Help is bad!
 bot.remove_command("help")

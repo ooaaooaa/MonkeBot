@@ -6,7 +6,7 @@ class NSFW(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(aliases=["boobs", "tits", "cleavage", "tiddies", "chunkers", "knockers", "chest"])
+    @commands.command(aliases=["booba", "tits", "cleavage", "tiddies", "chunkers", "knockers", "chest"])
     @commands.is_nsfw()
     async def boobs(self, ctx):
         """Fat on meat surrounded by skin"""
