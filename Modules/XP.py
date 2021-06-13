@@ -25,7 +25,6 @@ class XP(commands.Cog):
             db.insert({'user': author, 'xp': 0, 'lvl': 1})
         else:
             lvl = query[0]['lvl']
-            print(get_max(lvl))
             xp = query[0]['xp']
             xp = xp+randint(1,5) # "algorithm"
             if xp >= get_max(lvl):
