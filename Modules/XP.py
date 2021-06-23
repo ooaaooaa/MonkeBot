@@ -10,6 +10,7 @@ class XP(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
+
     @commands.Cog.listener()
     async def on_message(self, message):
         """who can bot the most xp?"""
@@ -30,7 +31,7 @@ class XP(commands.Cog):
             if xp >= get_max(lvl):
                 db.update({'lvl': lvl+1}, User.user == author)
                 db.update({'xp': 0}, User.user == author)
-                e = discord.Embed(title=f"Level up! You're now `{lvl}`",
+                e = discord.Embed(title=f"Level up! You're now `{lvl+1}`",
                                   description="Yo monkey ass levelled up",
                                   color=0x00ff69)
                 e.set_thumbnail(url="https://www.placemonkeys.com/{}".format(randint(400,600)))
@@ -81,6 +82,7 @@ def xp_to_bar(xp, max):
         else:
             bar += "─"
     return bar
+
 def get_max(lvl):
     with open('Database/levels.json', 'r') as monkey:
         lvls = json.load(monkey)
